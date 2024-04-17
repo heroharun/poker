@@ -1,0 +1,2 @@
+# poker
+avoid screen lock
