@@ -1,0 +1,27 @@
+import pyautogui
+import time
+
+def poker():
+    pos = pyautogui.position()
+    print(pos)
+    print('Width:', pyautogui.size())
+    maxwidth = pyautogui.size()[0]
+    maxheight = pyautogui.size()[1]
+    x = pos[0]
+    y = pos[1]
+    print('x = ', x, ' y = ', y)
+    
+    while True:
+        time.sleep(5)
+        pyautogui.moveTo(x + 170, y, duration=0.5)  # Fareyi sağa taşı
+        print('x = ', x, ' y = ', y)
+        
+        time.sleep(5)
+        pyautogui.click(x, y)  # Fareyi tıkla
+        print('click ', x, y)
+        
+        time.sleep(5)
+        pyautogui.moveTo(x - 170, y, duration=0.5)  # Fareyi sola taşı
+        print('x = ', x, ' y = ', y)
+
+poker()
