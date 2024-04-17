@@ -1,0 +1,28 @@
+from random import randrange
+from pymouse import PyMouse
+import time
+import sys; print(sys.executable)
+def poker():
+    mouse = PyMouse()
+    pos = mouse.position()
+    print(pos)
+    print('Width:', mouse.position())
+    maxwidth = mouse.screen_size()[0]
+    maxheight = mouse.screen_size()[1]
+    x = pos[0]
+    y = pos[1]
+    print('x = ',x , ' y = ',y)
+    while True:    
+
+        time.sleep(5)
+        mouse.move(x+170, y)
+        print('x = ',x , ' y = ',y)
+        time.sleep(5)
+        mouse.click(x,y)
+        print('click ',x,y)
+        time.sleep(5)
+        mouse.move(x-170, y)
+        print('x = ',x , ' y = ',y)
+
+
+poker()
